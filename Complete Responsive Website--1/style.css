@@ -1,0 +1,602 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    /* font-size: 62.5%; */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #301f00;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+
+
+/* ==================== NavBar ================== */
+.nav-bar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 60px;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+.nav-bar .nav-list {
+    display: flex;
+}
+
+.nav-bar .nav-list .nav-link {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 20px 40px; 
+    transition: .4s;
+}
+.nav-bar .nav-list .nav-link:hover,
+.nav-bar .nav-list .nav-link:focus {
+    background-color: orange;
+}
+
+
+
+
+/* ==================== Section-Banner ================ */
+.section-banner{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.87)), url(./assets/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.section-banner .heading-main {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.section-banner p {
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.home-text {
+    z-index: 2;
+}
+
+
+
+
+
+/* ===================== Section-about ================= */
+.section-about {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+.section-about .about-container p {
+    margin-bottom: 20px;
+}
+
+
+
+
+/* ==================== Section-offer ================== */
+.section-offer {
+    padding: 100px 0 200px 0px;
+    text-align: center;
+}
+
+.section-offer .offer-container {
+    width: 100%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     grid-template-rows: auto;
+     grid-gap: 20px;
+}
+
+.section-offer .offer {
+    background-color: #dbdbdb;
+    padding: 40px 20px;;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507);
+    transition: .4s;
+}
+
+.section-offer .offer i {
+   font-size: 70px;
+    color: #976302;
+    margin-bottom: 20px;
+}
+
+.section-offer .offer:hover {
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.295);
+    transform: translateY(-5px);
+}
+
+
+
+
+
+/* ==================== Section-newLetter ================== */
+.section-newsletter {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./assets/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.section-newsletter .newsletter-text .secondary-heading {
+    margin-bottom: 20px;
+}
+
+.section-newsletter .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.753);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.section-newsletter .newsletter-text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.section-newsletter form {
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.section-newsletter form input[type="email"] {
+    width: 80%;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .4s;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+}
+.section-newsletter form input[type="email"]:focus {
+    width: 100%;
+    border: 2px solid orange;
+}
+
+
+
+
+
+
+
+/* ================ section-contact ============== */
+.section-contact {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-contact .contact-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-gap: 40px;
+    grid-row-gap: 40px;
+    align-items: center;
+}
+
+
+.section-contact .contact-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 50px; 
+}
+
+.section-contact .contact-nav a {
+    color: #7a5000;
+    padding: 10px 20px;
+    transition: .4s;
+}
+.section-contact .contact-nav a:hover,
+.section-contact .contact-nav a:focus {
+    background-color: orange;
+    color: #fff;
+}
+
+.section-contact form {
+    width: 100%;
+    background-color: #dbdbdb;
+    padding: 20px;
+}
+.section-contact form input[type="text"],
+.section-contact form input[type="email"],
+.section-contact form textarea {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 20px;
+    resize: none;
+    margin-bottom: 10px;
+    transition: .4s;
+    border: 2px solid transparent;
+    font-family: inherit;
+}
+
+.section-contact form input[type="text"]:focus,
+.section-contact form input[type="email"]:focus,
+.section-contact form textarea:focus {
+    width: 100%;
+    border: 2px solid orange;
+}
+
+
+
+
+.section-contact .contact-list {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 100px;
+}
+
+.section-contact .contact-list .contact-item {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: .4s;
+    padding: 20px;
+    border-bottom: 1px solid orange;
+}
+.section-contact .contact-list .contact-item:hover {
+    padding: 10px;
+    background-color: orange;
+    color: #fff;
+}
+
+.section-contact .contact-list .contact-item i {
+   margin-right: 20px;
+   font-size: 25px;
+}
+
+
+
+.section-contact .social-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.section-contact .social-list .social-link {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: orange;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section-contact .social-list .social-link:hover {
+    color: orange;
+}
+
+.section-contact .social-list .social-link:hover::after {
+    top: 0;
+}
+
+.section-contact .social-list .social-link::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .4s;
+    z-index: -1;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+/* ==============secondary button ============ */
+.btn-main {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: orange;
+    color: #fff;
+    border-radius: 3px;
+    transition: .4s;
+    border: 2px solid transparent;
+}
+
+.btn-main:hover,
+.btn-main:focus {
+    color: orange;
+    background-color: #fff;
+    border: 2px solid orange;
+}
+
+
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #8f8f8f;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    transform: translateY(5px);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.247);
+}
+
+.btn-secondary:hover::after {
+    top: 0;
+}
+
+.btn-secondary::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transition: .4s;
+    z-index: -1;
+}
+
+/* =============== button round ========== */
+.btn-round {
+    display: inline-block;
+    border: none;
+    outline: none;
+    padding: 10px 60px;
+    font-family: inherit;
+    color: #fff;
+    background-color: orange;
+    border-radius: 40px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+.btn-round:hover {
+    background-color: #fff;
+    color: orange;
+    border: 2px solid orange;
+}
+
+
+
+
+/* ============= headings ============ */
+.secondary-heading {
+    text-align: center;
+    color: #8f8f8f;
+    font-size: 30px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 70px;
+}
+
+.secondary-heading::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    bottom: -0px;
+    left: 10px;
+}
+
+.tertiary-heading {
+    color: #8f8f8f;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* ==================== Desktop ================ */
+@media screen and (max-width: 768px) {
+
+    /* ===========navigation-menu =========== */
+        .nav-btn {
+            display: block;
+        }
+    
+        .nav-btn {
+            cursor: pointer;
+            transition: .4s;
+            z-index: 10;
+        }
+        
+        .nav-btn .lines {
+            width: 45px;
+            height: 3px;
+            background-color: #fff;
+            transition: .4s;
+        }
+        .nav-btn .lines:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        #menu-checkbox {
+            display: none;
+        }
+        
+        #menu-checkbox:checked ~ .nav-btn {
+            transform: rotate(-180deg);
+        }
+        #menu-checkbox:checked ~ .nav-btn .lines:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        #menu-checkbox:checked ~ .nav-btn .lines:nth-child(2) {
+            opacity: 0;
+        }
+        #menu-checkbox:checked ~ .nav-btn .lines:nth-child(3) {
+            transform: rotate(-45deg) translate(9px, -6px);
+        }
+    
+    
+        #menu-checkbox:checked ~ .nav-list {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .nav-list {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: orange;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9;
+            transform: translate3d(100%, 0, 0);
+            transition: .4s;
+        }
+        
+        .nav-bar .nav-list .nav-link {
+            display: inline-block;
+            color: #000;
+            padding: 20px 40px;
+            width: 200px;
+            text-align: center;
+            font-size: 25px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            transition: .4s;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .nav-bar .nav-list .nav-link:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    
+    
+    
+    
+        .section-about .about-container{
+            grid-template-columns: 1fr;
+        }
+    
+        .section-contact .contact-container {
+            grid-template-columns: 1fr;
+        }
+    
+    }
